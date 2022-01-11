@@ -8,6 +8,8 @@ import com.Rahimi.market.Model.Cart;
 import com.Rahimi.market.Model.CartItem;
 import com.Rahimi.market.Model.Customer;
 import com.Rahimi.market.Model.Product;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -20,6 +22,8 @@ import java.util.List;
 @SpringBootApplication
 @RestController
 public class MarketApplication {
+
+	private static final Logger log = LoggerFactory.getLogger(MarketApplication.class);
 
 	public static void main(String[] args) {
 		SpringApplication.run(MarketApplication.class, args);
@@ -52,4 +56,5 @@ public class MarketApplication {
 			iCartItemRepository.saveAll(cartItemList);
 		};
 	}
+
 }
